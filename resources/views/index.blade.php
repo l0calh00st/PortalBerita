@@ -18,9 +18,6 @@
     <!-- TOMBOL -->
     <div class="d-flex justify-content-between">
       <button id="mode-toggle" class="btn btn-outline-info">Ganti Tema</button>
-      <button class="btn btn-outline-primary">Fitur 1</button>
-      <button class="btn btn-outline-secondary">Fitur 2</button>
-      <button class="btn btn-outline-danger">Fitur 4</button>
     </div>
     <!-- TOMBOL -->
     <div class="row g-4 justify-content-center">
