@@ -1,0 +1,126 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+/* Variabel Warna */
+:root {
+    --cyber-bg: #0b0e14;
+    --cyber-card-bg: rgba(255, 255, 255, 0.05);
+    --neon-cyan: #00f3ff;
+    --neon-magenta: #ff00ff;
+    --text-color: #e0e0e0;
+}
+
+body {
+    background-color: var(--cyber-bg);
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    background-image: radial-gradient(circle at 50% 50%, #1a1f2c 0%, #0b0e14 100%);
+}
+
+/* Judul dengan font futuristik */
+.judul {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    color: var(--neon-cyan);
+    text-shadow: 0 0 10px var(--neon-cyan), 0 0 20px var(--neon-cyan);
+    letter-spacing: 5px;
+}
+
+/* Card Modern dengan Glassmorphism */
+.cyber-card {
+    background: var(--cyber-card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.cyber-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--neon-cyan);
+    box-shadow: 0 0 20px rgba(0, 243, 255, 0.3);
+}
+
+.img-wrapper {
+    padding: 15px;
+}
+
+.img-wrapper img {
+    border-radius: 10px;
+    filter: grayscale(30%);
+    transition: 0.3s;
+}
+
+.cyber-card:hover img {
+    filter: grayscale(0%);
+}
+
+.nama {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+.role {
+    font-size: 0.8rem;
+    color: #aaa;
+}
+
+/* Tombol Custom Neon */
+.btn-cyber {
+    background: transparent;
+    border: 1px solid var(--neon-magenta);
+    color: var(--neon-magenta);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    transition: 0.3s;
+}
+
+.btn-cyber:hover {
+    background: var(--neon-magenta);
+    color: #fff;
+    box-shadow: 0 0 15px var(--neon-magenta);
+}
+
+/* Warna Spinner Custom */
+.text-cyan {
+    color: var(--neon-cyan);
+}
+
+.text-magenta {
+    color: var(--neon-magenta);
+}
+
+.text-yellow {
+    color: #f3ff00;
+}
+
+/* Update bagian ini di style.css kamu */
+.tema-cyber {
+    background-color: #573d3d !important;
+    background-image: none !important;
+    /* Tambahkan ini agar gradasi hilang */
+    color: #00f3ff !important;
+}
+
+.tema-cyber .judul {
+    color: #00f3ff !important;
+    text-shadow: 0 0 20px #00f3ff, 0 0 40px #00f3ff;
+}
+
+/* Tambahan: Biar kartunya juga berubah saat mode cyber aktif */
+.tema-cyber .cyber-card {
+    border-color: #00f3ff;
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.2);
+}

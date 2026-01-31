@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Cyber Profile</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container py-5">
+        <h1 class="judul text-center mb-5">THE CYBER PROFILE</h1>
+        <h2 class="text-center">PROFILE</h2>
+        <div>
+            <div class="card cyber-card h-100">
+                <div class="img-wrapper text-center">
+                    <img src="https://i.pinimg.com/736x/76/e7/eb/76e7eb47b84cb1b945fc29dd00a8d2e6.jpg"
+                        class="card-img-top img-fluid shadow-sm" style="height: 20%; width: 20%;" alt="MAR'I SHOFIYANA">
+                </div>
+
+                <div class="card-body text-center">
+                    <h5 class="nama">MULYONO</h5>
+                    <p class="role text-uppercase small" style="color: var(--neon-cyan); letter-spacing: 2px;">
+                        Network Security
+                    </p>
+
+                    <hr class="border-secondary opacity-25">
+
+                    <p class="card-text small text-secondary">
+                        Spesialis dalam penetrasi jaringan dan enkripsi data tingkat tinggi.
+                    </p>
+
+                    <div class="mb-3">
+                        <span class="badge rounded-pill bg-dark border border-info text-info">Python</span>
+                        <span class="badge rounded-pill bg-dark border border-info text-info">Linux</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-5 py-4">
+            <div class="spinner-grow text-cyan" role="status"></div>
+            <div class="spinner-grow text-magenta" role="status"></div>
+            <div class="spinner-grow text-yellow" role="status"></div>
+        </div>
+        <button id="mode-toggle" class="btn btn-outline-info" style="margin-left: 46%;">Ganti Tema</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Pastikan tombol di HTML punya id="mode-toggle"
+        const btn = document.getElementById('mode-toggle');
+
+        btn.addEventListener('click', function () {
+            // Ini akan menambah class 'tema-cyber' ke body jika belum ada,
+            // dan menghapusnya jika sudah ada.
+            document.body.classList.toggle('tema-cyber');
+
+            // Opsional: Log ke console untuk cek apakah class berhasil nempel
+            console.log("Class tema-cyber aktif:", document.body.classList.contains('tema-cyber'));
+        });
+    </script>
+</body>
+
+</html>
